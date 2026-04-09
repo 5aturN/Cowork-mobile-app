@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Экран приветствия - PsySpace</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13c8ec",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#101f22",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "2xl": "2rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#111718] dark:text-white antialiased selection:bg-primary/30">
+<div class="relative flex min-h-screen w-full flex-col overflow-hidden max-w-md mx-auto shadow-2xl">
+<!-- Logo Area -->
+<div class="flex justify-center pt-8 pb-4 z-10">
+<div class="flex items-center gap-2 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-4 py-2 rounded-full border border-gray-200 dark:border-gray-800">
+<div class="text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">spa</span>
+</div>
+<span class="text-lg font-bold tracking-tight text-[#111718] dark:text-white">PsySpace</span>
+</div>
+</div>
+<!-- Main Content Area -->
+<div class="flex-1 flex flex-col">
+<!-- Hero Image Section -->
+<div class="relative w-full flex-1 min-h-[400px] px-4 py-3 flex flex-col">
+<div class="w-full h-full flex-1 bg-center bg-no-repeat bg-cover rounded-2xl overflow-hidden relative shadow-lg group" data-alt="Cozy modern psychology office interior with comfortable armchair, warm lighting, and plants" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCqNI4ROCJfH05qkPI73IneiyrisgcvurI7DwgW_lVaWQjUfIGmkrIp6ChNF4yIw5xPBhKRIcVkpZMlNcXIPqvdR9nsKNvgKU4Y2gUmFSQQVumq90IpOGsTHaL1rXj5Okn-VjlVC-qgYPtEdPTmiZdPh3JR-pMGH0DCKQC6iEDdaGHL3q4ZTnBQM-nK7xeIO9XAkz6g7CVDpPh92a2namSJDwsCslWjSVqEl2Q31eJoyTCabelMqnFJNjUp-8W-zdx4r37OkQYv0ac");'>
+<!-- Gradient Overlay for better text readability later if needed, mostly for aesthetics here -->
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background-dark/90 dark:to-background-dark"></div>
+<!-- Decorative subtle overlay -->
+<div class="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
+</div>
+</div>
+<!-- Text & Action Section -->
+<div class="flex flex-col px-6 pb-8 pt-2">
+<!-- Headline -->
+<div class="flex flex-col items-center">
+<h1 class="text-[#111718] dark:text-white tracking-tight text-[32px] font-extrabold leading-[1.15] text-center pb-3">
+                        Пространство для профессионалов
+                    </h1>
+</div>
+<!-- Body Text -->
+<p class="text-[#111718]/70 dark:text-white/70 text-base font-medium leading-relaxed pb-8 text-center max-w-[320px] mx-auto">
+                    Арендуйте уютные кабинеты для консультаций в один клик. Тишина, комфорт и конфиденциальность для вас и ваших клиентов.
+                </p>
+<!-- Primary Button -->
+<div class="w-full pb-3">
+<button class="w-full cursor-pointer flex items-center justify-center overflow-hidden rounded-xl h-14 bg-primary text-[#111718] hover:bg-primary/90 transition-colors duration-200 text-[17px] font-bold leading-normal tracking-[0.015em] shadow-lg shadow-primary/20">
+<span class="mr-2">Начать</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+<!-- Secondary Button (Login) -->
+<div class="w-full flex justify-center pb-6">
+<button class="cursor-pointer flex items-center justify-center rounded-xl h-10 px-6 bg-transparent text-[#111718]/60 dark:text-white/60 hover:text-[#111718] dark:hover:text-white transition-colors text-sm font-semibold leading-normal tracking-[0.015em]">
+<span>Уже есть аккаунт? <span class="text-[#111718] dark:text-white underline decoration-primary/50 underline-offset-4">Войти</span></span>
+</button>
+</div>
+<!-- Safe Area Spacer -->
+<div class="h-4"></div>
+</div>
+</div>
+</div>
+</body></html>

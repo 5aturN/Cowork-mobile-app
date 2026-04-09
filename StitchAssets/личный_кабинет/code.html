@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Личный кабинет - Coworking for Psychologists</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13c8ec",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#101f22",
+                        "surface-dark": "#19292d", // Slightly lighter than bg-dark for cards
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display min-h-screen text-slate-900 dark:text-white pb-32 selection:bg-primary selection:text-white">
+<!-- Top App Bar -->
+<div class="sticky top-0 z-40 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-gray-200 dark:border-white/5">
+<div class="flex items-center p-4 justify-between max-w-lg mx-auto w-full">
+<button class="text-slate-900 dark:text-white flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-10">
+                Личный кабинет
+            </h2>
+</div>
+</div>
+<main class="max-w-lg mx-auto w-full flex flex-col gap-6 p-4">
+<!-- Profile Header -->
+<div class="flex flex-col items-center gap-4 py-4">
+<div class="relative group cursor-pointer">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-32 w-32 shadow-xl ring-4 ring-background-light dark:ring-surface-dark" data-alt="Portrait of a female psychologist smiling professionally" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAX_N9EUW7Cg2cKlptq4gjZXvrdqt6ceniBM5uyIFI0Ee5VW0oWlxCNMHuPRkGTLAUDroO2hrj4DIBWgn9i4Z-96nfIzwAnHyT5OfRdGtEGb3lmfVxFb-O8nJJ-B-8QYlAcmcc575BTNW2BXCjH9yLPhPS9krLdY_6hBfVB2ZAzh95b888J6Ul6-D1v-cMM4XjIwJv0M_qM_L6nF4bn34W8DruXyM99zw6rpZnVD3r-ryXaTFbMLM-lRpb9Tug-5Qh8l5WR5Y5fEkg");'>
+</div>
+<div class="absolute bottom-1 right-1 bg-primary text-white p-1.5 rounded-full border-4 border-background-light dark:border-background-dark flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<div class="flex flex-col items-center justify-center">
+<h1 class="text-2xl font-bold leading-tight tracking-tight text-center">Александра Иванова</h1>
+<p class="text-slate-500 dark:text-[#9db4b9] text-base font-medium mt-1 text-center">Психолог-консультант</p>
+</div>
+</div>
+<!-- Section: Personal Data -->
+<div class="flex flex-col gap-2">
+<h3 class="text-slate-500 dark:text-[#9db4b9] text-sm font-bold uppercase tracking-wider px-4">Личные данные</h3>
+<div class="flex flex-col bg-white dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm dark:shadow-none divide-y divide-gray-100 dark:divide-white/5">
+<!-- Item: Edit Profile -->
+<button class="flex items-center gap-4 p-4 w-full hover:bg-gray-50 dark:hover:bg-white/5 transition-colors text-left group">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-10 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined">edit</span>
+</div>
+<div class="flex-1 truncate">
+<p class="text-base font-medium leading-normal">Редактировать профиль</p>
+</div>
+<span class="material-symbols-outlined text-slate-400 dark:text-slate-500">chevron_right</span>
+</button>
+<!-- Item: Qualifications -->
+<button class="flex items-center gap-4 p-4 w-full hover:bg-gray-50 dark:hover:bg-white/5 transition-colors text-left group">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-10 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined">school</span>
+</div>
+<div class="flex-1 truncate">
+<p class="text-base font-medium leading-normal">Квалификация и дипломы</p>
+</div>
+<span class="material-symbols-outlined text-slate-400 dark:text-slate-500">chevron_right</span>
+</button>
+<!-- Item: Change Password -->
+<button class="flex items-center gap-4 p-4 w-full hover:bg-gray-50 dark:hover:bg-white/5 transition-colors text-left group">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-10 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined">lock</span>
+</div>
+<div class="flex-1 truncate">
+<p class="text-base font-medium leading-normal">Безопасность</p>
+</div>
+<span class="material-symbols-outlined text-slate-400 dark:text-slate-500">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Section: Finance -->
+<div class="flex flex-col gap-2">
+<h3 class="text-slate-500 dark:text-[#9db4b9] text-sm font-bold uppercase tracking-wider px-4">Финансы</h3>
+<div class="flex flex-col bg-white dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm dark:shadow-none divide-y divide-gray-100 dark:divide-white/5">
+<!-- Item: Payment Methods -->
+<button class="flex items-center gap-4 p-4 w-full hover:bg-gray-50 dark:hover:bg-white/5 transition-colors text-left group">
+<div class="text-indigo-400 flex items-center justify-center rounded-lg bg-indigo-400/10 shrink-0 size-10 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined">credit_card</span>
+</div>
+<div class="flex-1 flex flex-col justify-center">
+<p class="text-base font-medium leading-normal">Способы оплаты</p>
+<p class="text-xs text-slate-500 dark:text-[#9db4b9]">Visa •••• 4242</p>
+</div>
+<span class="material-symbols-outlined text-slate-400 dark:text-slate-500">chevron_right</span>
+</button>
+<!-- Item: History -->
+<button class="flex items-center gap-4 p-4 w-full hover:bg-gray-50 dark:hover:bg-white/5 transition-colors text-left group">
+<div class="text-indigo-400 flex items-center justify-center rounded-lg bg-indigo-400/10 shrink-0 size-10 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined">receipt_long</span>
+</div>
+<div class="flex-1 truncate">
+<p class="text-base font-medium leading-normal">История транзакций</p>
+</div>
+<span class="material-symbols-outlined text-slate-400 dark:text-slate-500">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Section: Settings -->
+<div class="flex flex-col gap-2">
+<h3 class="text-slate-500 dark:text-[#9db4b9] text-sm font-bold uppercase tracking-wider px-4">Приложение</h3>
+<div class="flex flex-col bg-white dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm dark:shadow-none divide-y divide-gray-100 dark:divide-white/5">
+<!-- Item: Notifications (Toggle) -->
+<div class="flex items-center gap-4 p-4 w-full justify-between">
+<div class="flex items-center gap-4">
+<div class="text-emerald-400 flex items-center justify-center rounded-lg bg-emerald-400/10 shrink-0 size-10">
+<span class="material-symbols-outlined">notifications</span>
+</div>
+<p class="text-base font-medium leading-normal">Уведомления</p>
+</div>
+<!-- Toggle Switch -->
+<label class="inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="relative w-11 h-6 bg-slate-200 peer-focus:outline-none dark:peer-focus:ring-primary dark:bg-slate-700 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Item: Support -->
+<button class="flex items-center gap-4 p-4 w-full hover:bg-gray-50 dark:hover:bg-white/5 transition-colors text-left group">
+<div class="text-orange-400 flex items-center justify-center rounded-lg bg-orange-400/10 shrink-0 size-10 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined">help</span>
+</div>
+<div class="flex-1 truncate">
+<p class="text-base font-medium leading-normal">Помощь и поддержка</p>
+</div>
+<span class="material-symbols-outlined text-slate-400 dark:text-slate-500">chevron_right</span>
+</button>
+<!-- Item: Logout -->
+<button class="flex items-center gap-4 p-4 w-full hover:bg-red-50 dark:hover:bg-red-900/10 transition-colors text-left group">
+<div class="text-red-500 flex items-center justify-center rounded-lg bg-red-500/10 shrink-0 size-10 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined">logout</span>
+</div>
+<div class="flex-1 truncate">
+<p class="text-base font-medium leading-normal text-red-500">Выйти</p>
+</div>
+</button>
+</div>
+</div>
+<!-- Bottom Spacer -->
+<div class="h-8"></div>
+</main>
+<!-- Floating Bottom Navigation -->
+<div class="fixed bottom-6 left-0 right-0 z-50 flex justify-center px-4">
+<nav class="flex items-center justify-between bg-white/90 dark:bg-[#1a2c30]/90 backdrop-blur-xl border border-gray-200 dark:border-white/10 rounded-full h-16 w-full max-w-[340px] px-2 shadow-xl dark:shadow-black/50">
+<!-- Nav Item: Booking -->
+<button class="flex-1 flex flex-col items-center justify-center gap-1 h-full rounded-full text-slate-400 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[26px]">calendar_month</span>
+<span class="text-[10px] font-medium leading-none">Бронь</span>
+</button>
+<!-- Nav Item: Sessions -->
+<button class="flex-1 flex flex-col items-center justify-center gap-1 h-full rounded-full text-slate-400 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[26px]">schedule</span>
+<span class="text-[10px] font-medium leading-none">Сессии</span>
+</button>
+<!-- Nav Item: Profile (Active) -->
+<button class="flex-1 flex flex-col items-center justify-center gap-1 h-full rounded-full text-primary relative">
+<div class="absolute inset-0 bg-primary/10 rounded-full scale-75 -z-10"></div>
+<span class="material-symbols-outlined text-[26px]" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="text-[10px] font-bold leading-none">Профиль</span>
+</button>
+</nav>
+</div>
+</body></html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Вход - Бронирование Кабинетов</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Manrope -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13c8ec",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#101f22",
+                        "surface-dark": "#1c282b",
+                        "input-border-dark": "#2d3d42",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem", 
+                        "xl": "1.5rem", 
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom tweaks for iOS-like feel */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display antialiased selection:bg-primary selection:text-white">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Header Image Section -->
+<div class="@container w-full">
+<div class="flex flex-col">
+<div class="bg-cover bg-center flex flex-col justify-end overflow-hidden w-full h-[280px] relative rounded-b-[2rem] shadow-xl" data-alt="Modern abstract dark gradient background representing calm workspace" style='background-image: linear-gradient(180deg, rgba(16, 31, 34, 0) 0%, rgba(16, 31, 34, 0.8) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBE8jeiVFX0CbL2t55JznvJMDZ1b_jlD4JD3Y2l79AaXkQondelHUYluKzSIRzWuVXZUMCtdBBEMPbbdGCjM0jcTs7lvkHjKBJor21Q2hlt6Q7w7TQA6npiGi7nr4CcvhrJ3vNB3T6REuovibIJh2a1nIDBR0bWbrUjxxayrtpbXhzfS4CmOARj1Wyww_0nA9cDzYFOV19D7zxW9mo3EbL94aa__BgnkCrLzC_J-Ta30go3RQ0qyNg49ef2kgf3lkkXvC0t5ztJCGg");'>
+<div class="absolute inset-0 bg-background-dark/40 mix-blend-multiply"></div>
+<div class="flex flex-col p-6 z-10 pb-8">
+<div class="mb-2 inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/20 backdrop-blur-sm border border-primary/30 text-primary">
+<span class="material-symbols-outlined text-[28px]">chair_alt</span>
+</div>
+<h1 class="text-white tracking-tight text-[32px] font-extrabold leading-tight">Бронирование<br/>Кабинетов</h1>
+<p class="text-slate-300 text-sm mt-1 font-medium">Пространство для психологов</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Content Area -->
+<div class="flex-1 flex flex-col px-6 -mt-6 z-20 w-full max-w-md mx-auto">
+<!-- Segmented Control (Tabs) -->
+<div class="bg-white dark:bg-surface-dark p-1.5 rounded-xl shadow-lg shadow-black/5 mb-6 flex">
+<label class="flex-1 cursor-pointer">
+<input checked="" class="peer sr-only" name="auth-mode" type="radio" value="login"/>
+<div class="py-2.5 px-4 text-center text-sm font-semibold rounded-lg transition-all duration-200 text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 peer-checked:bg-primary peer-checked:text-white peer-checked:shadow-md">
+                        Вход
+                    </div>
+</label>
+<label class="flex-1 cursor-pointer">
+<input class="peer sr-only" name="auth-mode" type="radio" value="register"/>
+<div class="py-2.5 px-4 text-center text-sm font-semibold rounded-lg transition-all duration-200 text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 peer-checked:bg-primary peer-checked:text-white peer-checked:shadow-md">
+                        Регистрация
+                    </div>
+</label>
+</div>
+<!-- Form -->
+<form class="flex flex-col gap-5">
+<!-- Email Field -->
+<div class="flex flex-col gap-2">
+<label class="text-slate-900 dark:text-white text-sm font-medium ml-1" for="email">Email</label>
+<div class="relative group">
+<input class="form-input w-full rounded-xl bg-white dark:bg-surface-dark border border-slate-200 dark:border-input-border-dark text-slate-900 dark:text-white h-14 px-4 pl-12 focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all duration-200 outline-none placeholder:text-slate-400 dark:placeholder:text-slate-500 text-base font-medium" id="email" placeholder="email@example.com" type="email" value=""/>
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400 dark:text-slate-500 group-focus-within:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</div>
+</div>
+</div>
+<!-- Password Field -->
+<div class="flex flex-col gap-2">
+<label class="text-slate-900 dark:text-white text-sm font-medium ml-1" for="password">Пароль</label>
+<div class="relative group">
+<input class="form-input w-full rounded-xl bg-white dark:bg-surface-dark border border-slate-200 dark:border-input-border-dark text-slate-900 dark:text-white h-14 px-4 pl-12 pr-12 focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all duration-200 outline-none placeholder:text-slate-400 dark:placeholder:text-slate-500 text-base font-medium" id="password" placeholder="••••••••" type="password"/>
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400 dark:text-slate-500 group-focus-within:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">lock</span>
+</div>
+<button class="absolute inset-y-0 right-0 pr-4 flex items-center text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300 focus:outline-none" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+</div>
+</div>
+<!-- Forgot Password Link -->
+<div class="flex justify-end -mt-1">
+<a class="text-sm font-semibold text-primary hover:text-primary/80 transition-colors" href="#">
+                        Забыли пароль?
+                    </a>
+</div>
+<!-- Primary Action Button -->
+<button class="mt-4 w-full h-14 bg-primary hover:bg-cyan-400 active:scale-[0.98] transition-all rounded-xl shadow-[0_4px_14px_0_rgba(19,200,236,0.39)] flex items-center justify-center gap-2 group" type="button">
+<span class="text-white text-lg font-bold tracking-wide">Войти</span>
+<span class="material-symbols-outlined text-white transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+<!-- Divider -->
+<div class="flex items-center gap-3 mt-4 mb-2">
+<div class="h-px flex-1 bg-slate-200 dark:bg-slate-700"></div>
+<span class="text-xs text-slate-400 font-medium uppercase tracking-wider">Или через</span>
+<div class="h-px flex-1 bg-slate-200 dark:bg-slate-700"></div>
+</div>
+<!-- Social Login Buttons -->
+<div class="grid grid-cols-2 gap-4">
+<button class="flex items-center justify-center h-12 rounded-xl bg-white dark:bg-surface-dark border border-slate-200 dark:border-input-border-dark hover:bg-slate-50 dark:hover:bg-[#233135] transition-colors" type="button">
+<img alt="Google" class="w-5 h-5 mr-2" data-alt="Google Logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrwWMxPFLDcbVPPSbUZRWzECjiI3SOznDZB3NVVsWfd5TotTAxPQ-l6Wugpi-q52J9kfPsdZ5SiM-8Fjbek8vFT2z4Yd5o78-UdBzyFcVZEamlQGwFMKssl_BY45t3aqqtiyWUgmJtz6nVV-bek-Pqv0g77d9U5pDrZ518bZU2GwUYg6IZ0n-NWwaZeksFNcukde8SMOT7a6ZWLbapDNGXgY3ThPTS9ryaOLjjooQ_wViqSHpXMQZax9LNr0D3qcsvcXv4UUWrnEE"/>
+<span class="text-sm font-semibold text-slate-700 dark:text-slate-200">Google</span>
+</button>
+<button class="flex items-center justify-center h-12 rounded-xl bg-white dark:bg-surface-dark border border-slate-200 dark:border-input-border-dark hover:bg-slate-50 dark:hover:bg-[#233135] transition-colors" type="button">
+<span class="material-symbols-outlined text-[24px] text-slate-900 dark:text-white mr-2">ios</span>
+<span class="text-sm font-semibold text-slate-700 dark:text-slate-200">Apple</span>
+</button>
+</div>
+<!-- Biometric Hint -->
+<div class="flex justify-center mt-4">
+<button class="p-3 text-primary/50 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[32px]">face</span>
+</button>
+</div>
+</form>
+<!-- Bottom safe area spacer -->
+<div class="h-8 w-full"></div>
+</div>
+</div>
+</body></html>

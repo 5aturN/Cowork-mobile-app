@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Записи сессий</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13c8ec",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#101f22",
+                        "surface-dark": "#18282b",
+                        "surface-light": "#1e2d30"
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar hide for horizontal scrolling */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen font-display text-white selection:bg-primary selection:text-background-dark">
+<div class="relative flex h-full min-h-screen w-full flex-col overflow-hidden pb-24">
+<!-- Header -->
+<header class="sticky top-0 z-40 w-full bg-background-dark/95 backdrop-blur-sm pt-8 pb-2 px-4 border-b border-surface-light/50">
+<div class="flex items-center justify-between">
+<h1 class="text-white text-2xl font-bold leading-tight tracking-[-0.015em]">Записи сессий</h1>
+<button class="flex items-center justify-center size-10 rounded-full bg-primary text-background-dark hover:bg-primary/90 transition-colors shadow-[0_0_15px_rgba(19,200,236,0.3)]">
+<span class="material-symbols-outlined text-[24px]">add</span>
+</button>
+</div>
+</header>
+<!-- Search Bar -->
+<div class="px-4 py-4 w-full">
+<div class="relative flex w-full items-center rounded-xl bg-surface-dark border border-surface-light h-12 focus-within:border-primary/50 transition-colors">
+<div class="flex items-center justify-center pl-4 pr-2 text-[#9db4b9]">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="flex w-full bg-transparent text-white placeholder:text-[#6b7d82] text-base font-normal leading-normal border-none focus:ring-0 px-2 h-full rounded-r-xl" placeholder="Поиск по имени клиента" type="text"/>
+</div>
+</div>
+<!-- Filter Chips -->
+<div class="w-full overflow-x-auto no-scrollbar pb-2">
+<div class="flex gap-3 px-4 min-w-max">
+<button class="flex h-9 items-center justify-center px-5 rounded-full bg-primary text-background-dark font-bold text-sm transition-transform active:scale-95">
+                    Все
+                </button>
+<button class="flex h-9 items-center justify-center px-5 rounded-full bg-surface-dark border border-surface-light text-[#9db4b9] font-medium text-sm hover:border-primary/30 transition-colors active:scale-95">
+                    Предстоящие
+                </button>
+<button class="flex h-9 items-center justify-center px-5 rounded-full bg-surface-dark border border-surface-light text-[#9db4b9] font-medium text-sm hover:border-primary/30 transition-colors active:scale-95">
+                    Завершенные
+                </button>
+</div>
+</div>
+<!-- List Content -->
+<div class="flex flex-col gap-4 p-4 mt-2">
+<!-- Date Divider -->
+<div class="flex items-center gap-2 mb-1">
+<span class="text-xs font-bold text-primary tracking-wider uppercase">Сегодня, 24 Октября</span>
+<div class="h-[1px] flex-1 bg-surface-light"></div>
+</div>
+<!-- Card 1: Upcoming -->
+<div class="group relative flex flex-col gap-3 rounded-2xl bg-surface-dark p-4 border border-surface-light hover:border-primary/30 transition-all active:scale-[0.99]">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-3">
+<div class="relative">
+<div class="size-12 rounded-full bg-cover bg-center ring-2 ring-surface-light" data-alt="Portrait of a female client looking calm" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBJAPKfJXUgmxdUXvCDqCDOFG723M_S1ky7vo5D7PC5C0mNmfik8iFj7ijgMYuJkC-D4JYWfseAyplpzK5zAIf0USYND8ZuEO6c3E7aBzR-Lw1AmkDgNwAdIrkUYS9g4yNqeyatS8yUnliCeqv4ZUPjD1rVy8oU8rgzzdeRgavJLNJicg4oB01ctqHEW5N2cCiUlFCWwWbAoL27dm5mYgAt-euTpD_pDUMBn6o8xcM8rw5doHohAxbem0UODYgOEeOM9F8sW4Q1Pj8');">
+</div>
+<div class="absolute -bottom-1 -right-1 size-4 rounded-full bg-background-dark flex items-center justify-center">
+<div class="size-2.5 rounded-full bg-primary shadow-[0_0_8px_rgba(19,200,236,0.6)]"></div>
+</div>
+</div>
+<div>
+<h3 class="text-white text-base font-bold leading-tight">Анна Смирнова</h3>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="material-symbols-outlined text-[14px] text-primary">schedule</span>
+<p class="text-primary text-xs font-semibold">14:00 - 15:00</p>
+</div>
+</div>
+</div>
+<div class="px-2.5 py-1 rounded-lg bg-surface-light/50 border border-surface-light">
+<span class="text-[10px] font-medium text-[#9db4b9]">Кабинет 302</span>
+</div>
+</div>
+<div class="pl-[60px]">
+<p class="text-[#9db4b9] text-sm font-normal leading-snug line-clamp-2">
+                        Обсуждение триггеров тревожности на работе. Клиент просил подготовить тесты.
+                    </p>
+</div>
+</div>
+<!-- Card 2: Upcoming -->
+<div class="group relative flex flex-col gap-3 rounded-2xl bg-surface-dark p-4 border border-surface-light hover:border-primary/30 transition-all active:scale-[0.99]">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-3">
+<div class="relative">
+<div class="size-12 rounded-full bg-cover bg-center ring-2 ring-surface-light" data-alt="Portrait of a male client with glasses" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBmLH9IlF5GuDqWuqdGbZwKbd8fWuRS-1ASrJRf_jlrVlgmSScLms9ACSoEkFnFBxhl8lS3XaPo5hIzpLgMxKQzaLP-k6gRUrHpoixNVQCMVd6N-KbYrgVRIwiZjOXn4FvOT-Cx4TIGr6S_DWuAZhSIhyyaFTl5PKovc5I4Ks3joLSFkErh7jl9gubx80wdcmKEVIvaQ_2efO0l7uFGi4H1ROaSRpODkya8b5iMNX4EIhnmdkR_XFFZUrxjoGcOn6BI2_9JzehEKu0');">
+</div>
+<div class="absolute -bottom-1 -right-1 size-4 rounded-full bg-background-dark flex items-center justify-center">
+<div class="size-2.5 rounded-full bg-primary shadow-[0_0_8px_rgba(19,200,236,0.6)]"></div>
+</div>
+</div>
+<div>
+<h3 class="text-white text-base font-bold leading-tight">Михаил Петров</h3>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="material-symbols-outlined text-[14px] text-primary">schedule</span>
+<p class="text-primary text-xs font-semibold">16:30 - 17:30</p>
+</div>
+</div>
+</div>
+<div class="px-2.5 py-1 rounded-lg bg-surface-light/50 border border-surface-light">
+<span class="text-[10px] font-medium text-[#9db4b9]">Онлайн</span>
+</div>
+</div>
+<div class="pl-[60px]">
+<p class="text-[#9db4b9] text-sm font-normal leading-snug line-clamp-2">
+                        Первичная консультация. Сбор анамнеза.
+                    </p>
+</div>
+</div>
+<!-- Date Divider -->
+<div class="flex items-center gap-2 mt-4 mb-1">
+<span class="text-xs font-bold text-[#6b7d82] tracking-wider uppercase">Вчера, 23 Октября</span>
+<div class="h-[1px] flex-1 bg-surface-light"></div>
+</div>
+<!-- Card 3: Completed -->
+<div class="group relative flex flex-col gap-3 rounded-2xl bg-surface-dark/60 p-4 border border-surface-light hover:bg-surface-dark transition-all opacity-80 hover:opacity-100">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-3">
+<div class="relative">
+<div class="size-12 rounded-full bg-cover bg-center grayscale opacity-80" data-alt="Portrait of a female client smiling" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBTEGJvOOLM66rNyR5dHLEWslIkzkfjrNkRCxQYSJedrrbn6IvdsZvQBs-g3A6hyg2xIUvvJff3BDA0NGEBkATPHpcGZcbB8Qun0ksPnhpeLPVpuE_M2E_YjdXGARYbdrzKUaulhfaXUL3zKn1IdQ0ASuAxY8x2QpAu7nTVgOWof7IHwuesc4dNe3u7ZU-ZAUowCFgl-BX5xVzQ88-1MZYlPFMvl2G4WaN-LtJZmIKXnmbgPQ65v7dlQVLl1bfpRfL0PPvwbwwS82E');">
+</div>
+<div class="absolute -bottom-1 -right-1 size-4 rounded-full bg-background-dark flex items-center justify-center">
+<div class="size-2.5 rounded-full bg-[#3d4f52]"></div>
+</div>
+</div>
+<div>
+<h3 class="text-[#9db4b9] text-base font-semibold leading-tight line-through decoration-surface-light">Елена Волкова</h3>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="material-symbols-outlined text-[14px] text-[#6b7d82]">check_circle</span>
+<p class="text-[#6b7d82] text-xs font-medium">10:00 - 11:00</p>
+</div>
+</div>
+</div>
+<div class="px-2.5 py-1 rounded-lg bg-surface-light/30 border border-surface-light/50">
+<span class="text-[10px] font-medium text-[#6b7d82]">Завершено</span>
+</div>
+</div>
+</div>
+<!-- Card 4: Cancelled -->
+<div class="group relative flex flex-col gap-3 rounded-2xl bg-surface-dark/60 p-4 border border-surface-light hover:bg-surface-dark transition-all opacity-80 hover:opacity-100">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-3">
+<div class="relative">
+<div class="size-12 rounded-full bg-cover bg-center grayscale opacity-80" data-alt="Portrait of a male client in suit" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDt4dtOusWpirozHerSRd0e5BAtqoFBrhc3yCErdJo1RJUx5pdMeny_cFICWMGIW8RXx8JxQ7v2-cKXoewDi8Ni446MnySS3kQF98h3lpjYtGR61ebce9eg8nqdxHdMrbizI4g5qDpxuyhD_2AsRcPVez3y68xIpKIRqR6VOIIBKmxX5sN4x6fH5jDQk0efF8kWg51yTWoSZmJHVpU_Bxa-7iPKmXTH4X_eWKxiZ_NCWtEyib9UyKnPYj7sNpv4GYljsHRmqgZXEXY');">
+</div>
+<div class="absolute -bottom-1 -right-1 size-4 rounded-full bg-background-dark flex items-center justify-center">
+<div class="size-2.5 rounded-full bg-red-500/50"></div>
+</div>
+</div>
+<div>
+<h3 class="text-[#9db4b9] text-base font-semibold leading-tight">Дмитрий Иванов</h3>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="material-symbols-outlined text-[14px] text-red-400">cancel</span>
+<p class="text-red-400 text-xs font-medium">Отменено</p>
+</div>
+</div>
+</div>
+<div class="px-2.5 py-1 rounded-lg bg-surface-light/30 border border-surface-light/50">
+<span class="text-[10px] font-medium text-[#6b7d82]">Кабинет 104</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Floating Bottom Navigation -->
+<div class="fixed bottom-6 left-4 right-4 z-50">
+<div class="flex h-[72px] items-center justify-around rounded-full bg-[#18282b]/90 backdrop-blur-xl border border-surface-light shadow-[0_8px_32px_rgba(0,0,0,0.4)] px-2">
+<!-- Nav Item 1 -->
+<button class="group flex flex-1 flex-col items-center justify-center gap-1 py-1 h-full rounded-full transition-all active:scale-95">
+<div class="flex items-center justify-center p-1 rounded-full group-hover:bg-surface-light transition-colors">
+<span class="material-symbols-outlined text-[#9db4b9] group-hover:text-white" style="font-size: 26px;">calendar_month</span>
+</div>
+<span class="text-[10px] font-medium text-[#9db4b9] group-hover:text-white transition-colors">Бронирование</span>
+</button>
+<!-- Nav Item 2 (Active) -->
+<button class="relative flex flex-1 flex-col items-center justify-center gap-1 py-1 h-full rounded-full transition-all active:scale-95">
+<!-- Active Indicator Background -->
+<div class="absolute top-2 w-12 h-8 bg-primary/10 rounded-full"></div>
+<div class="relative flex items-center justify-center p-1 z-10">
+<span class="material-symbols-outlined text-primary fill-1" style="font-variation-settings: 'FILL' 1; font-size: 26px;">description</span>
+</div>
+<span class="relative z-10 text-[10px] font-bold text-primary">Мои сессии</span>
+</button>
+<!-- Nav Item 3 -->
+<button class="group flex flex-1 flex-col items-center justify-center gap-1 py-1 h-full rounded-full transition-all active:scale-95">
+<div class="flex items-center justify-center p-1 rounded-full group-hover:bg-surface-light transition-colors">
+<span class="material-symbols-outlined text-[#9db4b9] group-hover:text-white" style="font-size: 26px;">person</span>
+</div>
+<span class="text-[10px] font-medium text-[#9db4b9] group-hover:text-white transition-colors">Профиль</span>
+</button>
+</div>
+</div>
+</div>
+</body></html>

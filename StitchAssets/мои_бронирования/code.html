@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Мои бронирования</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#13c8ec",
+              "background-light": "#f6f8f8",
+              "background-dark": "#101f22",
+              "surface-dark": "#162629",
+              "surface-light": "#ffffff",
+            },
+            fontFamily: {
+              "display": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {
+              "DEFAULT": "0.5rem",
+              "lg": "1rem",
+              "xl": "1.5rem", 
+              "2xl": "2rem",
+              "full": "9999px"
+            },
+          },
+        },
+      }
+    </script>
+<style>
+        /* Custom scrollbar hiding for cleaner mobile look */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display antialiased selection:bg-primary selection:text-white">
+<div class="relative min-h-screen w-full flex flex-col mx-auto max-w-md shadow-2xl overflow-hidden bg-background-light dark:bg-background-dark">
+<!-- TopAppBar -->
+<header class="flex items-end justify-between px-6 pt-12 pb-4 bg-background-light dark:bg-background-dark z-10">
+<h1 class="text-3xl font-extrabold tracking-tight dark:text-white text-slate-900">Мои<br/>бронирования</h1>
+<button class="p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-2xl dark:text-slate-400">notifications</span>
+</button>
+</header>
+<!-- Tabs -->
+<div class="sticky top-0 z-20 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm pb-2">
+<div class="flex border-b border-slate-200 dark:border-slate-800 px-6">
+<button class="relative flex-1 pb-4 pt-2 text-center group">
+<span class="text-sm font-bold tracking-wide text-primary">Предстоящие</span>
+<div class="absolute bottom-0 left-0 w-full h-[3px] bg-primary rounded-t-full shadow-[0_-2px_8px_rgba(19,200,236,0.5)]"></div>
+</button>
+<button class="relative flex-1 pb-4 pt-2 text-center group">
+<span class="text-sm font-bold tracking-wide text-slate-500 dark:text-slate-400 group-hover:text-slate-700 dark:group-hover:text-slate-200 transition-colors">История</span>
+<div class="absolute bottom-0 left-0 w-full h-[3px] bg-transparent group-hover:bg-slate-300 dark:group-hover:bg-slate-700 rounded-t-full transition-colors"></div>
+</button>
+</div>
+</div>
+<!-- Scrollable Content -->
+<main class="flex-1 flex flex-col gap-4 px-4 py-6 pb-32 overflow-y-auto no-scrollbar">
+<!-- List Item: Today -->
+<div class="group relative flex items-center gap-4 p-4 rounded-2xl bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-white/5 shadow-sm active:scale-[0.98] transition-transform duration-200">
+<!-- Date Block -->
+<div class="shrink-0 flex flex-col items-center justify-center w-16 h-16 rounded-xl bg-primary/10 dark:bg-primary/20 text-primary border border-primary/20">
+<span class="text-xl font-extrabold leading-none">24</span>
+<span class="text-[11px] font-bold uppercase tracking-wider mt-1">Окт</span>
+</div>
+<!-- Content -->
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-2 mb-1">
+<h3 class="text-base font-bold truncate text-slate-900 dark:text-white">Кабинет «Фрейд»</h3>
+<span class="material-symbols-outlined text-primary text-[16px] fill-1">verified</span>
+</div>
+<div class="flex items-center text-sm text-slate-500 dark:text-slate-400 gap-2">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<p class="font-medium">15:00 - 16:00</p>
+</div>
+</div>
+<!-- Status/Action -->
+<div class="shrink-0 flex flex-col items-end gap-2">
+<span class="inline-flex items-center px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-wide bg-primary/10 text-primary ring-1 ring-inset ring-primary/20">
+                        Подтверждено
+                    </span>
+<button class="text-slate-400 hover:text-slate-600 dark:hover:text-white transition-colors">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</div>
+</div>
+<!-- List Item: Tomorrow -->
+<div class="group relative flex items-center gap-4 p-4 rounded-2xl bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-white/5 shadow-sm active:scale-[0.98] transition-transform duration-200">
+<!-- Date Block -->
+<div class="shrink-0 flex flex-col items-center justify-center w-16 h-16 rounded-xl bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300">
+<span class="text-xl font-extrabold leading-none">26</span>
+<span class="text-[11px] font-bold uppercase tracking-wider mt-1">Окт</span>
+</div>
+<!-- Content -->
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-2 mb-1">
+<h3 class="text-base font-bold truncate text-slate-900 dark:text-white">Кабинет «Юнг»</h3>
+</div>
+<div class="flex items-center text-sm text-slate-500 dark:text-slate-400 gap-2">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<p class="font-medium">10:00 - 12:00</p>
+</div>
+</div>
+<!-- Status/Action -->
+<div class="shrink-0 flex flex-col items-end gap-2">
+<span class="inline-flex items-center px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-wide bg-amber-500/10 text-amber-600 dark:text-amber-400 ring-1 ring-inset ring-amber-500/20">
+                        Ожидает
+                    </span>
+<button class="text-slate-400 hover:text-slate-600 dark:hover:text-white transition-colors">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</div>
+</div>
+<!-- List Item: Next Week -->
+<div class="group relative flex items-center gap-4 p-4 rounded-2xl bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-white/5 shadow-sm active:scale-[0.98] transition-transform duration-200">
+<!-- Date Block -->
+<div class="shrink-0 flex flex-col items-center justify-center w-16 h-16 rounded-xl bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300">
+<span class="text-xl font-extrabold leading-none">28</span>
+<span class="text-[11px] font-bold uppercase tracking-wider mt-1">Окт</span>
+</div>
+<!-- Content -->
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-2 mb-1">
+<h3 class="text-base font-bold truncate text-slate-900 dark:text-white">Кабинет «Адлер»</h3>
+</div>
+<div class="flex items-center text-sm text-slate-500 dark:text-slate-400 gap-2">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<p class="font-medium">14:00 - 15:00</p>
+</div>
+</div>
+<!-- Status/Action -->
+<div class="shrink-0 flex flex-col items-end gap-2">
+<span class="inline-flex items-center px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-wide bg-primary/10 text-primary ring-1 ring-inset ring-primary/20">
+                        Подтверждено
+                    </span>
+<button class="text-slate-400 hover:text-slate-600 dark:hover:text-white transition-colors">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</div>
+</div>
+<!-- List Item: Next Month -->
+<div class="group relative flex items-center gap-4 p-4 rounded-2xl bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-white/5 shadow-sm active:scale-[0.98] transition-transform duration-200 opacity-70 hover:opacity-100">
+<!-- Date Block -->
+<div class="shrink-0 flex flex-col items-center justify-center w-16 h-16 rounded-xl bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300">
+<span class="text-xl font-extrabold leading-none">02</span>
+<span class="text-[11px] font-bold uppercase tracking-wider mt-1">Ноя</span>
+</div>
+<!-- Content -->
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-2 mb-1">
+<h3 class="text-base font-bold truncate text-slate-900 dark:text-white">Групповой Зал</h3>
+</div>
+<div class="flex items-center text-sm text-slate-500 dark:text-slate-400 gap-2">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<p class="font-medium">18:00 - 20:00</p>
+</div>
+</div>
+<!-- Status/Action -->
+<div class="shrink-0 flex flex-col items-end gap-2">
+<span class="inline-flex items-center px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-wide bg-primary/10 text-primary ring-1 ring-inset ring-primary/20">
+                        Подтверждено
+                    </span>
+<button class="text-slate-400 hover:text-slate-600 dark:hover:text-white transition-colors">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</div>
+</div>
+<!-- Empty Space filler for scrolling -->
+<div class="h-8"></div>
+</main>
+<!-- Floating Navigation Bar -->
+<nav class="fixed bottom-6 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-[400px] z-50">
+<div class="relative flex items-center justify-between px-2 py-2 bg-slate-900/90 dark:bg-surface-dark/90 backdrop-blur-xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.4)] rounded-full">
+<!-- Nav Item: Booking -->
+<a class="flex-1 flex flex-col items-center justify-center gap-1 py-3 px-2 rounded-full text-slate-400 hover:text-white transition-all group" href="#">
+<div class="relative p-1">
+<span class="material-symbols-outlined text-[24px] group-hover:-translate-y-0.5 transition-transform duration-300">calendar_add_on</span>
+</div>
+<span class="text-[10px] font-bold opacity-70">Бронирование</span>
+</a>
+<!-- Nav Item: My Sessions (Active) -->
+<a class="flex-1 flex flex-col items-center justify-center gap-1 py-3 px-2 rounded-full text-primary transition-all" href="#">
+<div class="relative p-1 bg-primary/10 rounded-xl">
+<span class="material-symbols-outlined text-[24px] fill-1">event_note</span>
+</div>
+<span class="text-[10px] font-bold">Мои сессии</span>
+</a>
+<!-- Nav Item: Profile -->
+<a class="flex-1 flex flex-col items-center justify-center gap-1 py-3 px-2 rounded-full text-slate-400 hover:text-white transition-all group" href="#">
+<div class="relative p-1">
+<span class="material-symbols-outlined text-[24px] group-hover:-translate-y-0.5 transition-transform duration-300">person</span>
+</div>
+<span class="text-[10px] font-bold opacity-70">Профиль</span>
+</a>
+</div>
+</nav>
+<!-- Background Decor (Subtle Gradients) -->
+<div class="fixed top-0 left-0 w-full h-full pointer-events-none z-0 overflow-hidden">
+<div class="absolute top-[-10%] right-[-10%] w-[50%] h-[30%] bg-primary/5 rounded-full blur-3xl"></div>
+<div class="absolute bottom-[10%] left-[-10%] w-[40%] h-[40%] bg-blue-500/5 rounded-full blur-3xl"></div>
+</div>
+</div>
+</body></html>

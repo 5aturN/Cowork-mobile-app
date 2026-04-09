@@ -1,0 +1,76 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.buildlog/
+.history
+.svn/
+migrate_working_dir/
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Visual Studio Code related
+.vscode/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+**/build/
+coverage/
+
+# Generated files (if you want to exclude them, keep these lines; otherwise remove to track them)
+# Many teams prefer NOT to track these to keep the repo small.
+*.g.dart
+*.freezed.dart
+
+# Android related
+**/android/**/gradle-wrapper.jar
+**/android/.gradle
+**/android/captures/
+**/android/gradlew
+**/android/gradlew.bat
+**/android/local.properties
+**/android/**/generated/
+**/android/**/gradle/
+**/android/**/google-services.json
+
+# iOS related
+**/ios/**/*.mode1v3
+**/ios/**/*.mode2v3
+**/ios/**/*.moved-aside
+**/ios/**/*.pbuser
+**/ios/**/*.perspectivev3
+**/ios/**/*sync/
+**/ios/**/.xcode.env.local
+**/ios/**/Generated.xcconfig
+**/ios/Flutter/App.framework
+**/ios/Flutter/Flutter.framework
+**/ios/Flutter/Generated.xcconfig
+**/ios/Flutter/app.flx
+**/ios/Flutter/app.zip
+**/ios/ServiceDefinitions.json
+**/ios/Runner/generated/
+
+# Mac
+.DS_Store
+
+# Antigravity brain artifacts
+.gemini/
+
+# Exceptions to above rules.
+!/android/app/src/main/AndroidManifest.xml
+!/ios/Runner.xcodeproj/project.pbxproj
+

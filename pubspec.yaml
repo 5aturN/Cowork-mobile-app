@@ -1,0 +1,92 @@
+name: secretaire
+description: "Система бронирования кабинетов Secretaire"
+publish_to: 'none'
+version: 1.1.0+8
+
+environment:
+  sdk: '>=3.2.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  
+  # State Management
+  flutter_riverpod: ^2.5.1
+  riverpod_annotation: ^2.3.5
+  
+  # Navigation
+  go_router: ^14.0.2
+  
+  # Supabase
+  supabase_flutter: ^2.5.0
+  
+  # UI & Utilities
+  google_fonts: ^6.1.0
+  flutter_svg: ^2.0.10
+  intl: 0.20.2
+  
+  # Animations
+  animate_do: ^3.3.4
+  shimmer: ^3.0.0
+  
+  # Forms & Input
+  mask_text_input_formatter: ^2.9.0
+  flutter_slidable: ^3.1.0
+  
+  # Storage
+  shared_preferences: ^2.2.2
+  
+  # Forms & Validation
+  freezed_annotation: ^2.4.1
+  json_annotation: ^4.8.1
+  flutter_local_notifications: ^19.5.0
+  uuid: ^4.5.2
+  image_picker: ^1.2.1
+  palette_generator: ^0.3.3+7
+  cached_network_image: ^3.4.1
+  permission_handler: ^12.0.1
+  package_info_plus: ^9.0.0
+  url_launcher: ^6.3.2
+  firebase_core: ^4.3.0
+  firebase_messaging: ^16.1.0
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  
+  # Code Generation
+  build_runner: ^2.4.8
+  riverpod_generator: ^2.4.0
+  freezed: ^2.4.7
+  json_serializable: ^6.7.1
+  
+  # Linting
+  flutter_lints: ^4.0.0
+  flutter_launcher_icons: ^0.13.1
+  flutter_native_splash: ^2.4.7
+  image: ^4.7.2
+
+flutter:
+  uses-material-design: true
+  
+  assets:
+    - assets/images/
+    - assets/icons/
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: false
+  image_path: "assets/icons/app_icon.png"
+  min_sdk_android: 21
+  adaptive_icon_background: "assets/icons/app_icon.png"
+  adaptive_icon_foreground: "assets/icons/app_icon_foreground.png"
+
+flutter_native_splash:
+  color: "#000000"
+  image: "assets/icons/transparent_large.png"
+  android_12:
+    image: "assets/icons/transparent_large.png"
+    icon_background_color: "#000000"
